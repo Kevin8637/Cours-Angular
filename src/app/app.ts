@@ -4,10 +4,13 @@ import {ProductCard} from './features/products/components/product-card/product-c
 import {Footer} from './core/components/footer/footer';
 import {Header} from './core/components/header/header';
 import {ProductList} from './features/products/components/product-list/product-list';
+import {ImageGalery} from './features/products/components/image-galery/image-galery';
+import {Counter} from './features/products/components/counter/counter';
+import {SearchForm} from './features/products/components/search-form/search-form';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, ProductCard, Footer, Header, ProductList],
+  imports: [RouterOutlet, ProductCard, Footer, Header, ProductList, ImageGalery, Counter, SearchForm],
   templateUrl: './app.html',
   styleUrl: './app.scss'
 })

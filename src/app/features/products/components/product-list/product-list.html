@@ -6,4 +6,31 @@
     <app-product-card></app-product-card>
     <app-product-card></app-product-card>
   </div>
+  <p>{{products.length}} produits disponibles</p>
+  <section>
+    @for (product of products; track product.id){
+      <div class="product-card">
+        <h3>{{product.name}}</h3>
+        <p>{{product.price}}€</p>
+        @if (product.stock > 0){
+          <p class = "in-stock">En stock ({{product.stock}} restants)</p>
+        } @else {
+          <p class="out-of-stock">Rupture de stock</p>
+        }
+        @switch (product.category){
+          @case('electronics'){
+            <span class="badge blue">Electronique</span>
+          }
+          @case('clothing'){
+          <span class="badge green">Vêtements</span>
+          }
+          @default {
+            <span class="badge gray">Autre</span>
+          }
+        }
+      </div>
+    } @empty {
+      <p>Aucun produit disponible...</p>
+    }
+  </section>
 </div>

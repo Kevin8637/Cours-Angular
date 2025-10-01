@@ -10,5 +10,9 @@ import {ProductCard} from '../product-card/product-card';
   styleUrl: './product-list.scss'
 })
 export class ProductList {
-
+  products = [
+    { id: 1, name: 'iPhone 15', price: 999, category: 'electronics', stock: 10 },
+    { id: 2, name: 'T-shirt', price: 25, category: 'clothing', stock: 0 },
+    { id: 3, name: 'Livre Angular', price: 35, category: 'books', stock: 25 }
+  ]
 }
