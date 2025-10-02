@@ -1,36 +1,42 @@
 <div class="list-item">
   <p>product-list works!</p>
   <div class="list-product">
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-  </div>
-  <p>{{products.length}} produits disponibles</p>
-  <section>
     @for (product of products; track product.id){
-      <div class="product-card">
-        <h3>{{product.name}}</h3>
-        <p>{{product.price}}€</p>
-        @if (product.stock > 0){
-          <p class = "in-stock">En stock ({{product.stock}} restants)</p>
-        } @else {
-          <p class="out-of-stock">Rupture de stock</p>
+      <div class="card-product">
+        <img [src]="product.imageUrl" [alt]="product.description" class="img-product">
+      <h3>{{product.name}}</h3>
+      <p>Description : {{product.description}}</p>
+      <p>{{ product.price | currency:"EUR":'symbol': '1.2-2': 'fr'}}</p>
+      <p>{{product.rating}}</p>
+      @switch (product.category){
+        @case ('gaming'){
+          <span class="category-product">🎮 Jeux vidéo</span>
         }
-        @switch (product.category){
-          @case('electronics'){
-            <span class="badge blue">Electronique</span>
-          }
-          @case('clothing'){
-          <span class="badge green">Vêtements</span>
-          }
-          @default {
-            <span class="badge gray">Autre</span>
-          }
+        @case ('clothing'){
+          <span class="category-product">👕 Mode</span>
         }
+        @case ('house'){
+          <span class="category-product">🏠 Maison</span>
+        }
+        @case ('electronics'){
+          <span class="category-product">📱 High-tech</span>
+        }
+        @case('sports'){
+          <span class="category-product">⚽ Sport</span>
+        }
+        @default {
+          <span class="category-product">📦 Autre</span>
+        }
+      }
+      @if(product.inStock){
+        <p>Disponible</p>
+      } @else {
+        <p>Rupture</p>
+      }
+        <button matFab extended>Ajouter au panier</button>
       </div>
-    } @empty {
-      <p>Aucun produit disponible...</p>
     }
-  </section>
+  </div>
+  <p>{{products.length}} produits au total</p>
+  <p>{{productsInStock.length}} produits en stock</p>
 </div>
