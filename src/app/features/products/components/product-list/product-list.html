@@ -6,9 +6,11 @@
         <img [src]="product.imageUrl" [alt]="product.description" class="img-product">
       <h3>{{product.name}}</h3>
       <p>Description : {{product.description}}</p>
-      <p>{{ product.price | currency:"EUR":'symbol': '1.2-2': 'fr'}}</p>
-      <p>{{product.rating}}</p>
-      @switch (product.category){
+        <div class="price-rating-product">
+          <p class="price-product">{{ product.price | currency:"EUR":'symbol': '1.2-2': 'fr'}}</p>
+          <p>{{product.rating}} ⭐</p>
+        </div>
+        @switch (product.category){
         @case ('gaming'){
           <span class="category-product">🎮 Jeux vidéo</span>
         }
@@ -33,7 +35,7 @@
       } @else {
         <p>Rupture</p>
       }
-        <button matFab extended>Ajouter au panier</button>
+        <button matFab extended [ngStyle]="{'background-color' : (product.inStock) ? '' : '#EE8B8B'}">Ajouter au panier</button>
       </div>
     }
   </div>

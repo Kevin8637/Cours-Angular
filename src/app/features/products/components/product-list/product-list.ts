@@ -1,15 +1,18 @@
-import { Component } from '@angular/core';
-import {CurrencyPipe} from '@angular/common';
+import {Component} from '@angular/core';
+import {CurrencyPipe, NgOptimizedImage, NgStyle} from '@angular/common';
 import {MatFabButton} from '@angular/material/button';
+import {FormsModule} from '@angular/forms';
 
 @Component({
   selector: 'app-product-list',
   imports: [
     CurrencyPipe,
-    MatFabButton
+    MatFabButton,
+    FormsModule,
+    NgStyle,
   ],
   templateUrl: './product-list.html',
-  styleUrl: './product-list.scss'
+  styleUrl: './product-list.scss',
 })
 export class ProductList {
   products = [
