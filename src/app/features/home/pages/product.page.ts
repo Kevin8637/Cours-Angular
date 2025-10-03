@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
 import ProductList from '../../products/components/product-list/product-list';
 import {Product} from '../../../models/product.model';
 import {ActivatedRoute} from '@angular/router';
@@ -14,10 +14,6 @@ import {ActivatedRoute} from '@angular/router';
   styles: ``
 })
 export default class ProductPage {
-  products: Product[] = [];
-
-  constructor(private route:ActivatedRoute) {
-    this.products = this.route.snapshot.data['products'];
-    console.log(this.products);
-  }
+  private route = inject(ActivatedRoute);
+  products: Product[] = this.route.snapshot.data['products'];
 }

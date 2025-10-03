@@ -2,7 +2,7 @@ import { ResolveFn } from '@angular/router';
 import {Product} from '../../models/product.model';
 
 export const productListResolver: ResolveFn<Product[]> = () => {
-  const productsList = [
+  const productsList: Product[] = [
     {
       id: 1,
       name: 'The Witcher 3: Wild Hunt',

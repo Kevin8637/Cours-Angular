@@ -70,8 +70,4 @@ export default class ProductList {
   ]
 
   productsInStock = this.products.filter(product => product.inStock);
-
-  getProducts(){
-    return of(this.products);
-  }
 }
