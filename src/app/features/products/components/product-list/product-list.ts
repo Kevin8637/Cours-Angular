@@ -14,7 +14,7 @@ import {FormsModule} from '@angular/forms';
   templateUrl: './product-list.html',
   styleUrl: './product-list.scss',
 })
-export class ProductList {
+export default class ProductList {
   products = [
     {
       id: 1,
