@@ -13,6 +13,6 @@ import { Component } from '@angular/core';
     padding: 1rem;
   }`
 })
-export class HomePage {
+export default class HomePage {
 
 }

@@ -1,22 +1,8 @@
-import {Component} from '@angular/core';
-import {CurrencyPipe, NgStyle} from '@angular/common';
-import {MatFabButton} from '@angular/material/button';
-import {FormsModule} from '@angular/forms';
-import {of} from 'rxjs';
+import { ResolveFn } from '@angular/router';
+import {Product} from '../../models/product.model';
 
-@Component({
-  selector: 'app-product-list',
-  imports: [
-    CurrencyPipe,
-    MatFabButton,
-    FormsModule,
-    NgStyle,
-  ],
-  templateUrl: './product-list.html',
-  styleUrl: './product-list.scss',
-})
-export default class ProductList {
-  products = [
+export const productListResolver: ResolveFn<Product[]> = () => {
+  const productsList = [
     {
       id: 1,
       name: 'The Witcher 3: Wild Hunt',
@@ -68,10 +54,5 @@ export default class ProductList {
       rating: 4.3
     }
   ]
-
-  productsInStock = this.products.filter(product => product.inStock);
-
-  getProducts(){
-    return of(this.products);
-  }
-}
+  return productsList;
+};

@@ -3,9 +3,9 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-admin.page',
   imports: [],
-  templateUrl: './admin.page.html',
-  styleUrl: './admin.page.scss'
+  template: '<h1>Admin Page</h1>',
+  styles: ''
 })
-export class AdminPage {
+export default class AdminPage {
 
 }

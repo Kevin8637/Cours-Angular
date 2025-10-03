@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-orders.page',
+  selector: 'app-about.page',
   imports: [],
   template: `
     <p>
-      orders.page works!
+      about.page works!
     </p>
   `,
   styles: ``
 })
-export class OrdersPage {
+export default class AboutPage {
 
 }

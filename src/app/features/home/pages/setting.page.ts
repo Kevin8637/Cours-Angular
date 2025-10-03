@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-profile.page',
+  selector: 'app-setting.page',
   imports: [],
   template: `
     <p>
-      profile.page works!
+      setting.page works!
     </p>
   `,
   styles: ``
 })
-export class ProfilePage {
+export default class SettingPage {
 
 }

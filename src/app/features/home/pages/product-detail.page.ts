@@ -11,7 +11,7 @@ import {ActivatedRoute} from '@angular/router';
   `,
   styles: ``
 })
-export class ProductDetailPage {
+export default class ProductDetailPage {
   private route = inject(ActivatedRoute);
   productId = this.route.snapshot.paramMap.get('id');
 }

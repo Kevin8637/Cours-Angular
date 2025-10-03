@@ -1,5 +1,12 @@
-import { CanActivateFn } from '@angular/router';
+import {CanActivateFn, Router} from '@angular/router';
+import {inject} from '@angular/core';
 
 export const authGuard: CanActivateFn = (route, state) => {
-  return true;
+  const router = inject(Router);
+  if (localStorage.getItem('iLoveSalmon') === 'true') {
+    return true;
+  } else {
+    router.navigate(['/error']);
+    return false;
+  };
 };
