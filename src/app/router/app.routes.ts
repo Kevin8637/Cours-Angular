@@ -9,6 +9,7 @@ export const routes: Routes = [
   { path: 'products/:id', loadComponent: () => import('../features/home/pages/product-detail.page')},
   { path: "admin", loadComponent:() => import('../features/home/pages/admin.page'), canActivate: [authGuard]},
   { path: "about", loadComponent: () => import('../features/home/pages/about.page')},
+  { path: "form", loadComponent: () => import('../features/home/pages/profile-form.page/profile-form.page')},
   { path: "settings", loadComponent:() => import('../features/home/pages/setting.page')},
   { path: 'error', component: ErrorPage },
   { path: '**', redirectTo: 'error' }

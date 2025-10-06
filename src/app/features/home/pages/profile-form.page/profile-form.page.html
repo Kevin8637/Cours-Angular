@@ -1,0 +1,54 @@
+<form [formGroup]="profileForm">
+  <label>
+    Nom :
+    <input type="text" formControlName="name">
+  </label>
+  @if (profileForm.controls.name.invalid && profileForm.controls.name.touched){
+    <p class="error">Le nom est requis</p>
+  }
+  <label>
+    Age :
+    <input type="number" formControlName="age">
+  </label>
+  @if (profileForm.controls.age.invalid && profileForm.controls.age.touched){
+    <p class="error">Age invalide</p>
+  }
+
+  <button type="submit" [disabled]="profileForm.invalid">Envoyer</button>
+</form>
+
+
+<form [formGroup]="registerForm">
+  <label>
+    Identifiant :
+    <input type="text" formControlName="username">
+  </label>
+  @if (registerForm.controls.username.invalid && registerForm.controls.username.touched){
+    <p class="error">Le nom est requis</p>
+  }
+  <label>
+    Age :
+    <input type="number" formControlName="age">
+  </label>
+  @if (registerForm.controls.age.invalid && registerForm.controls.age.touched){
+    <p class="error">Age invalide</p>
+  }
+  <label>
+    Email :
+    <input type="email" formControlName="email">
+  </label>
+  @if (registerForm.controls.email.invalid && registerForm.controls.email.touched){
+    <p class="error">Email invalide</p>
+  }
+  <label>
+    Téléphone :
+    <input type="text" formControlName="phone">
+  </label>
+  @if (registerForm.controls.phone.errors?.['pattern'] && registerForm.controls.phone.touched){
+    <p class="error">Numéro de téléphone invalide</p>
+  }
+
+  <button type="submit" [disabled]="registerForm.invalid">Envoyer</button>
+</form>
+
+<app-adress-form></app-adress-form>
