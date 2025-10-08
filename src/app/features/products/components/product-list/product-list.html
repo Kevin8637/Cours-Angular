@@ -1,44 +1,19 @@
-<div class="list-item">
-  <p>product-list works!</p>
-  <div class="list-product">
-    @for (product of products; track product.id){
-      <div class="card-product">
-        <img [src]="product.imageUrl" [alt]="product.description" class="img-product">
-      <h3>{{product.name}}</h3>
-      <p>Description : {{product.description}}</p>
-        <div class="price-rating-product">
-          <p class="price-product">{{ product.price | currency:"EUR":'symbol': '1.2-2': 'fr'}}</p>
-          <p>{{product.rating}} ⭐</p>
-        </div>
-        @switch (product.category){
-        @case ('gaming'){
-          <span class="category-product">🎮 Jeux vidéo</span>
-        }
-        @case ('clothing'){
-          <span class="category-product">👕 Mode</span>
-        }
-        @case ('house'){
-          <span class="category-product">🏠 Maison</span>
-        }
-        @case ('electronics'){
-          <span class="category-product">📱 High-tech</span>
-        }
-        @case('sports'){
-          <span class="category-product">⚽ Sport</span>
-        }
-        @default {
-          <span class="category-product">📦 Autre</span>
-        }
+<div class="product-list-container">
+  <h2>Notre catalogue</h2>
+
+  @if (products.length > 0) {
+    <div class="list-product">
+      @for (product of products; track product.id) {
+        <app-product-card [product]="product"></app-product-card>
+        <app-product-card [product]="product"></app-product-card>
       }
-      @if(product.inStock){
-        <p>Disponible</p>
-      } @else {
-        <p>Rupture</p>
-      }
-        <button matFab extended [ngStyle]="{'background-color' : (product.inStock) ? '' : '#EE8B8B'}">Ajouter au panier</button>
-      </div>
-    }
-  </div>
-  <p>{{products.length}} produits au total</p>
-  <p>{{productsInStock.length}} produits en stock</p>
+    </div>
+
+    <div class="product-stats">
+      <p><strong>{{ getTotalProducts() }}</strong> produits au total</p>
+      <p><strong>{{ getInStockCount() }}</strong> produits en stock</p>
+    </div>
+  } @else {
+    <p class="no-products">Aucun produit disponible pour le moment</p>
+  }
 </div>

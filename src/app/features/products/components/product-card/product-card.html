@@ -1,0 +1,29 @@
+<div class="product-card">
+  <div class="product-image-container">
+    <button (click)="onToggleFavorite()" class="favorite-button">❤️</button>
+    <img [src]="product().imageUrl" [alt]="product().name" class="img-product">
+  </div>
+  <div class="content-card">
+    <div class="product-info">
+      <h3 class="product-name">{{product().name}}</h3>
+      <p class="product-description">{{product().description}}</p>
+    </div>
+
+    <div class="product-meta">
+      <span class="product-price">{{ product().price }}€</span>
+      <span class="product-rating">⭐ {{ product().rating }}/5</span>
+    </div>
+
+    <div class="product-actions">
+      @if (product().inStock) {
+        <button (click)="onAddToCart()" class="btn-primary">
+          Ajouter au panier
+        </button>
+      } @else {
+        <button [disabled]="true" class="btn-disabled">
+          En rupture
+        </button>
+      }
+    </div>
+  </div>
+</div>

@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import ProductList from '../../products/components/product-list/product-list';
+import {ProductList} from '../../products/components/product-list/product-list';
 import {Product} from '../../../models/product.model';
 import {ActivatedRoute} from '@angular/router';
 
