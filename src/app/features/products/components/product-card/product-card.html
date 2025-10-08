@@ -1,6 +1,6 @@
 <div class="product-card">
   <div class="product-image-container">
-    <button (click)="onToggleFavorite()" class="favorite-button">❤️</button>
+    <button (click)="onToggleFavorite()" class="favorite-button">{{ isFavorite() ? '❤️' : '🤍' }}</button>
     <img [src]="product().imageUrl" [alt]="product().name" class="img-product">
   </div>
   <div class="content-card">

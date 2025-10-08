@@ -13,9 +13,39 @@ import {Product} from '../../../../models/product.model';
 })
 export class ProductList implements OnInit {
   products: Product[] = [];
+  cartItems: Product[] = [];
+  favoriteIds: number[] = [];
 
   ngOnInit(): void {
     this.loadProducts();
+  }
+
+  onProductAddedToCart(product: Product): void {
+    this.cartItems.push(product);
+    console.log(`${product.name} ajouté au panier !`);
+    console.log(`Panier: ${this.cartItems.length} articles`);
+  }
+
+  onProductAddedToFavorites(product:Product): void {
+    this.favoriteIds.push(product.id);
+    console.log(`${product.name} ajouté aux favoris !`);
+  }
+
+  onProductRemovedFromFavorites(product: Product): void {
+    this.favoriteIds = this.favoriteIds.filter(id => id !== product.id);
+    console.log(`${product.name} retiré des favoris !`);
+  }
+
+  isInFavorites(productId: number):boolean{
+    return this.favoriteIds.includes(productId);
+  }
+
+  getCartCount(): number {
+    return this.cartItems.length;
+  }
+
+  getFavoritesCount(): number {
+    return this.favoriteIds.length;
   }
 
   private loadProducts(): void {

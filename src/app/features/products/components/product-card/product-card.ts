@@ -21,11 +21,21 @@ export class ProductCard {
     })
   }
 
+  productAddedToCart = output<Product>();
+  productAddedToFavorites = output<Product>();
+  productRemovedFromFavorites = output<Product>();
+
+  isFavorite = input<boolean>(false);
+
   onAddToCart(): void {
-    console.log(`${this.product().name} ajouté au panier !`)
+    this.productAddedToCart.emit(this.product());
   }
 
   onToggleFavorite(): void {
-    console.log(`${this.product().name} ajouté aux favoris !`)
+    if(this.isFavorite()) {
+      this.productRemovedFromFavorites.emit(this.product());
+    } else {
+      this.productAddedToFavorites.emit(this.product());
+    }
   }
 }
