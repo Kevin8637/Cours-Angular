@@ -2,7 +2,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCard } from '../product-card/product-card';
-import {Product} from '../../../../models/product.model';
+import {Product, Review} from '../../../../models/product.model';
+import {ProductNotationForm} from '../product-notation-form/product-notation-form';
 
 
 @Component({
@@ -34,6 +35,27 @@ export class ProductList implements OnInit {
   onProductRemovedFromFavorites(product: Product): void {
     this.favoriteIds = this.favoriteIds.filter(id => id !== product.id);
     console.log(`${product.name} retiré des favoris !`);
+  }
+
+  onNotationAdded(event: {productId: number; rating:number; comment:string}): void {
+    const reviewNotation:number[] = [];
+    console.log(`Nouvelle note ${event.rating} !`);
+    const product = this.products.find(p =>p.id === event.productId);
+    console.log(product?.rating);
+    console.log(event.rating);
+    console.log(reviewNotation);
+    if(!product) return;
+
+    reviewNotation.push(event.rating);
+    reviewNotation.push(product.rating);
+    console.log(reviewNotation);
+
+    const total = product.rating + event.rating;
+    const average = total / reviewNotation.length;
+    console.log(`total : ${total}`);
+    product.rating = parseFloat(average.toFixed(1));
+
+    console.log(`Nouvelle note ajoutée pour ${product.name} : ${event.rating}/5 - Nouvelle moyenne : ${product.rating}/5`)
   }
 
   isInFavorites(productId: number):boolean{
@@ -109,5 +131,9 @@ export class ProductList implements OnInit {
 
   getInStockCount(): number {
     return this.products.filter(p => p.inStock).length;
+  }
+
+  getAverageNotation():number{
+    return this.products.reduce((sum, p) => sum + p.rating, 0) / this.products.length;
   }
 }

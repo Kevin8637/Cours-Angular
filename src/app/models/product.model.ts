@@ -9,4 +9,12 @@ export type Product = {
   category: CategoryOfProduct;
   inStock: boolean;
   rating: number;
+  reviews? : number[];
+}
+
+export type Review = {
+  productId: number;
+  rating: number;
+  comment: string;
+  date: Date;
 }

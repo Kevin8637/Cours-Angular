@@ -16,3 +16,8 @@ export type LoginFormModel = {
   username: FormControl<string>,
   password: FormControl<string>
 }
+
+export type NotationFormModel = {
+  rating: FormControl<number>,
+  comment: FormControl<string>
+}
