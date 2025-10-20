@@ -1,11 +1,11 @@
 import {Component, computed, effect, input, output} from '@angular/core';
 import {Product} from '../../../../models/product.model';
-import {ProductNotationForm} from '../product-notation-form/product-notation-form';
+// import {ProductNotationForm} from '../product-notation-form/product-notation-form';
 
 @Component({
   selector: 'app-product-card',
   imports: [
-    ProductNotationForm
+    // ProductNotationForm
   ],
   templateUrl: './product-card.html',
   styleUrl: './product-card.scss'

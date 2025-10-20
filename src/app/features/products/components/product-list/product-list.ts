@@ -1,24 +1,37 @@
 // product-list.ts
-import { Component, OnInit } from '@angular/core';
+import {Component, computed, OnInit, signal} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCard } from '../product-card/product-card';
-import {Product, Review} from '../../../../models/product.model';
-import {ProductNotationForm} from '../product-notation-form/product-notation-form';
+import {Product} from '../../../../models/product.model';
+import {ProductFilter} from '../product-filter/product-filter';
 
 
 @Component({
   selector: 'app-product-list',
-  imports: [CommonModule, ProductCard],
+  imports: [CommonModule, ProductCard, ProductFilter],
   templateUrl: './product-list.html',
   styleUrls: ['./product-list.scss']
 })
 export class ProductList implements OnInit {
-  products: Product[] = [];
+  products = signal<Product[]>([]);
   cartItems: Product[] = [];
   favoriteIds: number[] = [];
 
+  categoryProducts = signal("");
+
   ngOnInit(): void {
     this.loadProducts();
+  }
+  filteredProducts = computed<Product[]>(()=>{
+    const category = this.categoryProducts();
+    const products = this.products();
+    if(!category) return products;
+    return products.filter(product => product.category === category);
+    }
+  )
+
+  onFilteredProducts(category: string): void {
+    this.categoryProducts.set(category);
   }
 
   onProductAddedToCart(product: Product): void {
@@ -40,7 +53,7 @@ export class ProductList implements OnInit {
   onNotationAdded(event: {productId: number; rating:number; comment:string}): void {
     const reviewNotation:number[] = [];
     console.log(`Nouvelle note ${event.rating} !`);
-    const product = this.products.find(p =>p.id === event.productId);
+    const product = this.products().find(p =>p.id === event.productId);
     console.log(product?.rating);
     console.log(event.rating);
     console.log(reviewNotation);
@@ -71,7 +84,7 @@ export class ProductList implements OnInit {
   }
 
   private loadProducts(): void {
-    this.products = [
+    this.products.set( [
       {
         id: 1,
         name: 'The Witcher 3: Wild Hunt',
@@ -122,18 +135,14 @@ export class ProductList implements OnInit {
         inStock: false,
         rating: 4.3
       }
-    ];
+    ]);
   }
 
   getTotalProducts(): number {
-    return this.products.length;
+    return this.products().length;
   }
 
   getInStockCount(): number {
-    return this.products.filter(p => p.inStock).length;
-  }
-
-  getAverageNotation():number{
-    return this.products.reduce((sum, p) => sum + p.rating, 0) / this.products.length;
+    return this.products().filter(p => p.inStock).length;
   }
 }

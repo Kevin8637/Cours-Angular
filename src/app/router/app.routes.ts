@@ -9,6 +9,7 @@ export const routes: Routes = [
   { path: 'products/:id', loadComponent: () => import('../features/home/pages/product-detail.page')},
   { path: "admin", loadComponent:() => import('../features/home/pages/admin.page'), canActivate: [authGuard]},
   { path: "about", loadComponent: () => import('../features/home/pages/about.page')},
+  { path: "bean", loadComponent:() => import('../features/home/pages/bean-page')},
   { path: "auth", loadComponent: () => import('../features/auth/pages/auth.page'),
   children: [
     {path: "register", loadComponent: () => import('../features/auth/pages/register.page')},

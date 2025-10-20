@@ -26,16 +26,16 @@
           </button>
         }
       </div>
-      <div class="product-notation">
-        @if(!showRatingForm){
-          <button (click)="onActivateRatingForm()" class="btn-primary">Donner un avis</button>
-        } @else {
-          <app-product-notation-form
-          (close)="onDeactivateRatingForm()"
-          (submitNote)="onSubmitRating($event)">
-          </app-product-notation-form>
-        }
-      </div>
+<!--      <div class="product-notation">-->
+<!--        @if(!showRatingForm){-->
+<!--          <button (click)="onActivateRatingForm()" class="btn-primary">Donner un avis</button>-->
+<!--        } @else {-->
+<!--          <app-product-notation-form-->
+<!--          (close)="onDeactivateRatingForm()"-->
+<!--          (submitNote)="onSubmitRating($event)">-->
+<!--          </app-product-notation-form>-->
+<!--        }-->
+<!--      </div>-->
     </div>
   </div>
 </div>

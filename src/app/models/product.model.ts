@@ -1,4 +1,4 @@
-type CategoryOfProduct = 'gaming' | 'clothing' | 'home' | 'sports' | 'electronics';
+export type CategoryOfProduct = 'gaming' | 'clothing' | 'home' | 'sports' | 'electronics';
 
 export type Product = {
   id: number;
