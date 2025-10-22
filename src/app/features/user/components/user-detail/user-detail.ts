@@ -1,10 +1,12 @@
 import {Component, inject, signal} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {User} from '../user-list/user-list';
-import {firstValueFrom} from 'rxjs';
 
-type Post = {
-  id: number;
+import {firstValueFrom} from 'rxjs';
+import {User} from '../../services/models/user.model';
+import {ActivatedRoute} from '@angular/router';
+
+export type Post = {
+  id: string;
 }
 
 @Component({
@@ -14,6 +16,8 @@ type Post = {
   styleUrl: './user-detail.scss'
 })
 export class UserDetail {
+  private route = inject(ActivatedRoute);
+  users:User = this.route.snapshot.data['user'] as User;
   private http = inject(HttpClient);
 
   user = signal<User[]>([]);
@@ -37,7 +41,7 @@ export class UserDetail {
     }
   }
 
-  async delete(postId: number) {
+  async delete(postId: string) {
     try {
       await firstValueFrom((this.http.delete(`/posts/${postId}`)));
       this.posts.update(posts => posts.filter(p => p.id === postId));

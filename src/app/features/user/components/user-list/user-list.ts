@@ -1,15 +1,6 @@
-import {Component, inject, signal} from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {firstValueFrom} from 'rxjs';
-
-export type User = {
-  id:number;
-  name: string;
-  email: string;
-  username: string;
-  phone: string;
-  website: string;
-}
+import {Component, inject, OnInit, signal} from '@angular/core';
+import {UserApi} from '../../services/user-api';
+import {User} from '../../services/models/user.model';
 
 @Component({
   selector: 'app-user-list',
@@ -17,36 +8,30 @@ export type User = {
   templateUrl: './user-list.html',
   styleUrl: './user-list.scss'
 })
-export class UserList {
-  private http = inject(HttpClient);
+export class UserList implements OnInit {
+  private userApi = inject(UserApi);
 
   users = signal<User[]>([]);
   isLoading = signal<boolean>(false);
-  error = signal<string | null> (null);
+  isDeleting = signal<string | null>(null);
+  errorMessage = signal<string | null> (null);
 
-  ngOnInit() {
-    this.loadUsers();
+  async ngOnInit() {
+    await this.loadUsers();
   }
 
   async loadUsers() {
-    try {
-      this.isLoading.set(true);
-      this.error.set(null);
+    this.isLoading.set(true);
+    this.errorMessage.set(null);
 
-      const users = await firstValueFrom(
-        this.http.get<User[]>('https://jsonplaceholder.typicode.com/users')
-      );
-
-      this.users.set(users);
-    } catch (err) {
-      this.error.set('Erreur lors du chargement des utilisateurs');
-      console.log('Erreur API : ', err);
-    } finally {
-      this.isLoading.set(false);
-    }
+    const users = await this.userApi.getUsers();
+    this.users.set(users);
   }
 
-  async refresh() {
-    await this.loadUsers();
+  async deleteUser(userId:string) {
+    this.isDeleting.set(userId);
+
+    await this.userApi.deleteUser(userId);
+    this.users.update(users => users.filter(u => u.id !== userId));
   }
 }

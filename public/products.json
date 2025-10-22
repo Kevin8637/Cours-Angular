@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Casque Bluetooth sans fil",
+    "description": "Casque audio stéréo avec réduction de bruit active et autonomie de 30h.",
+    "price": 89.99,
+    "imageUrl": "https://example.com/images/casque-bluetooth.jpg",
+    "category": "High-Tech",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Montre connectée SportFit X3",
+    "description": "Montre connectée avec capteur cardiaque, GPS intégré et suivi du sommeil.",
+    "price": 129.90,
+    "imageUrl": "https://example.com/images/montre-connectee.jpg",
+    "category": "High-Tech",
+    "inStock": false,
+    "rating": 4.3
+  },
+  {
+    "id": 3,
+    "name": "Sweat à capuche coton bio",
+    "description": "Sweat doux et respirant en coton biologique, disponible en plusieurs tailles.",
+    "price": 39.99,
+    "imageUrl": "https://example.com/images/sweat-coton-bio.jpg",
+    "category": "Mode",
+    "inStock": true,
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Lampe de chevet tactile LED",
+    "description": "Lampe LED à intensité variable avec fonction tactile et chargeur USB intégré.",
+    "price": 24.50,
+    "imageUrl": "https://example.com/images/lampe-led.jpg",
+    "category": "Maison",
+    "inStock": true,
+    "rating": 4.2
+  },
+  {
+    "id": 5,
+    "name": "Tapis de yoga antidérapant",
+    "description": "Tapis de yoga épais et confortable, parfait pour la méditation et le fitness.",
+    "price": 29.95,
+    "imageUrl": "https://example.com/images/tapis-yoga.jpg",
+    "category": "Sport",
+    "inStock": true,
+    "rating": 4.6
+  },
+  {
+    "id": 6,
+    "name": "Bouteille isotherme inox 750ml",
+    "description": "Garde vos boissons chaudes pendant 12h et froides pendant 24h.",
+    "price": 19.90,
+    "imageUrl": "https://example.com/images/bouteille-inox.jpg",
+    "category": "Maison",
+    "inStock": true,
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "name": "Clavier mécanique RGB",
+    "description": "Clavier gamer avec rétroéclairage RGB personnalisable et switches tactiles.",
+    "price": 79.99,
+    "imageUrl": "https://example.com/images/clavier-rgb.jpg",
+    "category": "Informatique",
+    "inStock": true,
+    "rating": 4.4
+  },
+  {
+    "id": 8,
+    "name": "Chaussures de running AirStep",
+    "description": "Chaussures de sport légères avec semelle amortissante et design moderne.",
+    "price": 64.90,
+    "imageUrl": "https://example.com/images/chaussures-running.jpg",
+    "category": "Sport",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 9,
+    "name": "Coffret bougies parfumées",
+    "description": "Lot de 4 bougies parfumées naturelles à la cire de soja, senteurs variées.",
+    "price": 22.99,
+    "imageUrl": "https://example.com/images/bougies-parfumees.jpg",
+    "category": "Maison",
+    "inStock": false,
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "name": "Sac à dos urbain étanche",
+    "description": "Sac à dos ergonomique et imperméable, idéal pour le travail ou les voyages.",
+    "price": 54.99,
+    "imageUrl": "https://example.com/images/sac-urbain.jpg",
+    "category": "Mode",
+    "inStock": true,
+    "rating": 4.3
+  },
+  {
+    "id": 11,
+    "name": "Cafetière italienne inox 6 tasses",
+    "description": "Cafetière moka compatible induction, design élégant et poignée ergonomique.",
+    "price": 34.50,
+    "imageUrl": "https://example.com/images/cafetiere-italienne.jpg",
+    "category": "Cuisine",
+    "inStock": true,
+    "rating": 4.7
+  },
+  {
+    "id": 12,
+    "name": "Crème hydratante visage bio",
+    "description": "Crème hydratante à l'aloe vera et huile de jojoba, pour tous types de peau.",
+    "price": 18.90,
+    "imageUrl": "https://example.com/images/creme-visage-bio.jpg",
+    "category": "Beauté",
+    "inStock": true,
+    "rating": 4.8
+  },
+  {
+    "id": 13,
+    "name": "Enceinte Bluetooth portable",
+    "description": "Enceinte sans fil compacte avec basse puissante et résistance à l’eau IPX7.",
+    "price": 49.99,
+    "imageUrl": "https://example.com/images/enceinte-bluetooth.jpg",
+    "category": "High-Tech",
+    "inStock": true,
+    "rating": 4.4
+  },
+  {
+    "id": 14,
+    "name": "Coussin décoratif velours",
+    "description": "Coussin doux en velours 45x45 cm avec housse amovible et lavable.",
+    "price": 14.99,
+    "imageUrl": "https://example.com/images/coussin-velours.jpg",
+    "category": "Maison",
+    "inStock": true,
+    "rating": 4.6
+  },
+  {
+    "id": 15,
+    "name": "Souris ergonomique sans fil",
+    "description": "Souris confortable avec capteur optique précis et batterie rechargeable.",
+    "price": 29.90,
+    "imageUrl": "https://example.com/images/souris-ergonomique.jpg",
+    "category": "Informatique",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 16,
+    "name": "Parfum floral Élégance",
+    "description": "Eau de parfum pour femme, notes de jasmin et vanille, 50 ml.",
+    "price": 59.90,
+    "imageUrl": "https://example.com/images/parfum-elegance.jpg",
+    "category": "Beauté",
+    "inStock": false,
+    "rating": 4.7
+  },
+  {
+    "id": 17,
+    "name": "Tablette 10 pouces HD",
+    "description": "Tablette Android avec écran HD, 64 Go de stockage et Wi-Fi double bande.",
+    "price": 199.00,
+    "imageUrl": "https://example.com/images/tablette-hd.jpg",
+    "category": "High-Tech",
+    "inStock": true,
+    "rating": 4.3
+  },
+  {
+    "id": 18,
+    "name": "Tondeuse barbe rechargeable",
+    "description": "Tondeuse sans fil avec 5 longueurs de coupe et autonomie de 90 minutes.",
+    "price": 44.99,
+    "imageUrl": "https://example.com/images/tondeuse-barbe.jpg",
+    "category": "Beauté",
+    "inStock": true,
+    "rating": 4.6
+  },
+  {
+    "id": 19,
+    "name": "Casserole inox 20 cm",
+    "description": "Casserole en acier inoxydable compatible tous feux, y compris induction.",
+    "price": 27.50,
+    "imageUrl": "https://example.com/images/casserole-inox.jpg",
+    "category": "Cuisine",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 20,
+    "name": "Tapis de souris XXL gamer",
+    "description": "Tapis grand format antidérapant avec coutures renforcées, 90x40 cm.",
+    "price": 19.99,
+    "imageUrl": "https://example.com/images/tapis-souris.jpg",
+    "category": "Informatique",
+    "inStock": true,
+    "rating": 4.8
+  },
+  {
+    "id": 21,
+    "name": "Set de 6 verres à vin",
+    "description": "Verres à vin en cristal sans plomb, élégants et résistants au lave-vaisselle.",
+    "price": 32.90,
+    "imageUrl": "https://example.com/images/verres-vin.jpg",
+    "category": "Cuisine",
+    "inStock": true,
+    "rating": 4.7
+  },
+  {
+    "id": 22,
+    "name": "Bracelet en cuir tressé",
+    "description": "Bracelet unisexe en cuir véritable avec fermoir magnétique en acier.",
+    "price": 24.90,
+    "imageUrl": "https://example.com/images/bracelet-cuir.jpg",
+    "category": "Mode",
+    "inStock": false,
+    "rating": 4.4
+  },
+  {
+    "id": 23,
+    "name": "Tente de camping 2 places",
+    "description": "Tente légère et imperméable, facile à monter, parfaite pour le trekking.",
+    "price": 89.00,
+    "imageUrl": "https://example.com/images/tente-camping.jpg",
+    "category": "Sport",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 24,
+    "name": "Diffuseur d’huiles essentielles",
+    "description": "Diffuseur ultrasonique avec éclairage LED et arrêt automatique.",
+    "price": 34.99,
+    "imageUrl": "https://example.com/images/diffuseur-huiles.jpg",
+    "category": "Maison",
+    "inStock": true,
+    "rating": 4.8
+  },
+  {
+    "id": 25,
+    "name": "Jeu de société Stratégia",
+    "description": "Jeu de plateau pour 2 à 6 joueurs, durée moyenne d'une partie : 45 minutes.",
+    "price": 42.00,
+    "imageUrl": "https://example.com/images/jeu-strategia.jpg",
+    "category": "Loisirs",
+    "inStock": true,
+    "rating": 4.6
+  },
+  {
+    "id": 26,
+    "name": "Oreiller mémoire de forme",
+    "description": "Oreiller ergonomique avec mousse à mémoire de forme et housse lavable.",
+    "price": 49.50,
+    "imageUrl": "https://example.com/images/oreiller-memoire.jpg",
+    "category": "Maison",
+    "inStock": true,
+    "rating": 4.7
+  },
+  {
+    "id": 27,
+    "name": "Stylo plume argenté",
+    "description": "Stylo plume élégant en acier inoxydable, livré avec cartouche bleue.",
+    "price": 21.90,
+    "imageUrl": "https://example.com/images/stylo-plume.jpg",
+    "category": "Bureau",
+    "inStock": true,
+    "rating": 4.4
+  },
+  {
+    "id": 28,
+    "name": "Appareil photo instantané Snapix",
+    "description": "Appareil photo instantané avec impression thermique et carte SD 32 Go.",
+    "price": 149.00,
+    "imageUrl": "https://example.com/images/appareil-photo.jpg",
+    "category": "High-Tech",
+    "inStock": true,
+    "rating": 4.5
+  },
+  {
+    "id": 29,
+    "name": "Porte-clés multifonction",
+    "description": "Petit outil en acier 5-en-1 : tournevis, décapsuleur, couteau, lime, clé.",
+    "price": 14.50,
+    "imageUrl": "https://example.com/images/porte-cles.jpg",
+    "category": "Accessoires",
+    "inStock": false,
+    "rating": 4.2
+  },
+  {
+    "id": 30,
+    "name": "Ensemble de pinceaux maquillage",
+    "description": "Set de 10 pinceaux professionnels pour le teint, les yeux et les lèvres.",
+    "price": 25.99,
+    "imageUrl": "https://example.com/images/pinceaux-maquillage.jpg",
+    "category": "Beauté",
+    "inStock": false,
+    "rating": 4.8
+  }
+]

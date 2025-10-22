@@ -1,9 +1,9 @@
-// product-list.ts
-import {Component, computed, OnInit, signal} from '@angular/core';
+import {Component, computed, inject, OnInit, signal} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ProductCard } from '../product-card/product-card';
-import {Product} from '../../../../models/product.model';
 import {ProductFilter} from '../product-filter/product-filter';
+import {Product} from '../../services/models/product.model';
+import {ProductApi} from '../../services/product-api';
 
 
 @Component({
@@ -13,7 +13,11 @@ import {ProductFilter} from '../product-filter/product-filter';
   styleUrls: ['./product-list.scss']
 })
 export class ProductList implements OnInit {
+  private productApi = inject(ProductApi)
+
   products = signal<Product[]>([]);
+  isLoading = signal<boolean>(false);
+  errorMessage = signal<string | null>(null);
   cartItems: Product[] = [];
   favoriteIds: number[] = [];
 
@@ -22,6 +26,7 @@ export class ProductList implements OnInit {
   ngOnInit(): void {
     this.loadProducts();
   }
+
   filteredProducts = computed<Product[]>(()=>{
     const category = this.categoryProducts();
     const products = this.products();

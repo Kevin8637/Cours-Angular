@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Photo } from '../../../../models/product.model';
+import { Photo } from '../../../../models/photo-product.model';
 import { firstValueFrom } from 'rxjs';
 import { NgOptimizedImage } from '@angular/common';
 
