@@ -1,0 +1,79 @@
+.product-notation-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.product-notation-form {
+  background-color: whitesmoke;
+  width: 400px;
+  height: 450px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+
+.product-notation-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-notation-form label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.product-notation-form textarea,
+.product-notation-form select {
+  margin-top: 5px;
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-buttons {
+  margin-top : auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+button {
+  background-color: transparent;
+  background-image: linear-gradient(#fff, #f5f5fa);
+  border: 0 solid #003dff;
+  border-radius: 9999px;
+  box-shadow: rgba(37, 44, 97, .15) 0 4px 11px 0, rgba(93, 100, 148, .2) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: #484c7a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Hind, system-ui, BlinkMacSystemFont, -apple-system, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  margin: 4px 4px 10px 4px;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: inherit;
+  text-wrap: nowrap;
+  transition: all .2s ease-out;
+  transition-behavior: normal;
+  white-space-collapse: collapse;
+  line-height: 1.15;
+}
+
+button:hover {
+  box-shadow: rgba(37, 44, 97, .15) 0 8px 22px 0, rgba(93, 100, 148, .2) 0 4px 6px 0;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: .5;
+}

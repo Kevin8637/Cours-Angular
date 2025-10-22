@@ -1,0 +1,25 @@
+<div class="product-notation-overlay" (click)="onClose()">
+  <form [formGroup]="notationForm" class="product-notation-form" (click)="$event.stopPropagation()" (submit)="onSubmit()">
+    <h2>Donner un avis</h2>
+
+    <label for="rating">Note:</label>
+    <select id="rating" formControlName="rating">
+      <option [value]="1">⭐</option>
+      <option [value]="2">⭐⭐</option>
+      <option [value]="3">⭐⭐⭐</option>
+      <option [value]="4">⭐⭐⭐⭐</option>
+      <option [value]="5">⭐⭐⭐⭐⭐</option>
+    </select>
+
+    <label for="comment"> Avis :</label>
+      <textarea id="comment" formControlName="comment" name="comment" rows="5"></textarea>
+      @if(notationForm.controls.comment.invalid && notationForm.controls.comment.touched){
+        <p class="error">L"avis ne peut contenir que 500 caractères)</p>
+      }
+
+    <div class="form-buttons">
+      <button type="button" (click)="onClose()">Annuler</button>
+      <button type="submit" [disabled]="notationForm.invalid">Envoyer</button>
+    </div>
+  </form>
+</div>
