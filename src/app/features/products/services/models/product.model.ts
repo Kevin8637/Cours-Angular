@@ -1,7 +1,17 @@
-export type CategoryOfProduct = 'gaming' | 'clothing' | 'home' | 'sports' | 'electronics';
+export type CategoryOfProduct =
+  | "High-Tech"
+  | "Mode"
+  | "Maison"
+  | "Sport"
+  | "Informatique"
+  | "Cuisine"
+  | "Beauté"
+  | "Loisirs"
+  | "Bureau"
+  | "Accessoires";
 
 export type Product = {
-  id: string;
+  id: number;
   name: string;
   description: string;
   price: number;

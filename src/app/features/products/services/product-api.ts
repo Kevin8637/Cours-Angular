@@ -9,27 +9,27 @@ import {CreateProduct} from './models/create-product.model';
 })
 export class ProductApi extends BaseApi{
   constructor() {
-    super('/public');
+    super('');
   }
 
   async getProducts(): Promise<Product[]> {
     return this.get<Product[]>('/products.json')
   }
 
-  async getProductById(id:string): Promise<Product | undefined>{
+  async getProductById(id:number): Promise<Product | undefined>{
     const products = await this.getProducts();
     return products.find(p => p.id === id);
   }
 
-  async createProduct(product:CreateProduct): Promise<Product>{
-    return this.post<Product>('/product.json', product);
-  }
-
-  async updateProduct(id:string, product: UpdateProduct): Promise<Product>{
-    return this.put<Product>(`/product.json/${id}`, product);
-  }
-
-  async deleteProduct(id: string): Promise<void> {
-    return this.delete<void>(`/product.json/${id}`);
-  }
+  // async createProduct(product:CreateProduct): Promise<Product>{
+  //   return this.post<Product>('/product.json', product);
+  // }
+  //
+  // async updateProduct(id:string, product: UpdateProduct): Promise<Product>{
+  //   return this.put<Product>(`/product.json/${id}`, product);
+  // }
+  //
+  // async deleteProduct(id: string): Promise<void> {
+  //   return this.delete<void>(`/product.json/${id}`);
+  // }
 }

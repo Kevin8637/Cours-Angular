@@ -17,6 +17,9 @@
 
 .product-image-container{
   position: relative;
+  border : 1px solid black;
+  border-radius : 25px 25px 0 0;
+  background-color : #EE8b8b;
 }
 
 .content-card{
@@ -27,8 +30,7 @@
 }
 
 .img-product{
-  border-radius : 25px 25px 0 0;
-  width : 100%;
+  width : 60%;
 }
 
 .category-product{

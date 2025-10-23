@@ -1,6 +1,7 @@
 import {Component, computed, effect, input, output} from '@angular/core';
 import {Product} from '../../services/models/product.model';
 
+
 @Component({
   selector: 'app-product-card',
   imports: [
@@ -12,17 +13,12 @@ import {Product} from '../../services/models/product.model';
 export class ProductCard {
   product = input.required<Product>();
   isFavorite = input<boolean>(false);
-  reviewAdded = output<{productId: number, rating: number, comment: string}>();
+  // reviewAdded = output<{productId: number, rating: number, comment: string}>();
   productAddedToCart = output<Product>();
   productAddedToFavorites = output<Product>();
   productRemovedFromFavorites = output<Product>();
 
-  showRatingForm:boolean = false;
-
-  displayPrice = computed(() => {
-    const p = this.product();
-    return p.inStock ? `${p.price}€` : `Prix indisponible`;
-  })
+  // showRatingForm:boolean = false;
 
   constructor() {
     effect(() => {
@@ -42,20 +38,20 @@ export class ProductCard {
     }
   }
 
-  onActivateRatingForm(): void {
-    this.showRatingForm = true;
-  }
-
-  onDeactivateRatingForm(): void {
-    this.showRatingForm = false;
-  }
-
-  onSubmitRating(event : {rating: number, comment: string}):void {
-    this.showRatingForm = false;
-    this.reviewAdded.emit({
-      productId: this.product().id,
-      rating: event.rating,
-      comment: event.comment
-    })
-  }
+  // onActivateRatingForm(): void {
+  //   this.showRatingForm = true;
+  // }
+  //
+  // onDeactivateRatingForm(): void {
+  //   this.showRatingForm = false;
+  // }
+  //
+  // onSubmitRating(event : { rating: number, comment: string}):void {
+  //   this.showRatingForm = false;
+  //   this.reviewAdded.emit({
+  //     productId: this.product().id,
+  //     rating: event.rating,
+  //     comment: event.comment
+  //   })
+  // }
 }
