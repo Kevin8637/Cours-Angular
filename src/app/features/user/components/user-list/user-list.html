@@ -1,36 +1,20 @@
 <div class="container">
   <h2>Liste des utilisateurs</h2>
 
-  @if (!isLoading()) {
-      <p>Chargement des utilisateurs...</p>
-  }
+  <div class="actions">
+    <button (click)="loadMockUsers()">Charger un petit mock</button>
+    <button (click)="addRandomUser()">Ajouter un user aléatoire</button>
+    <button (click)="updateFirstUser()">Modifier le premier user</button>
+    <button (click)="clearUsers()">Vider la liste omg</button>
+  </div>
+<!--  @if (!isLoading()) {-->
+<!--      <p>Chargement des utilisateurs...</p>-->
+<!--  }-->
 
     @for (user of users(); track user.id) {
       <div class="user-card">
         <p><strong>{{ user.name }}</strong> - {{ user.email }}</p>
-        <button (click)="deleteUser(user.id)" [disabled]="isDeleting() === user.id">
-          {{ isDeleting() === user.id ? 'Suppression...' : 'Supprimer'}}
-        </button>
-      </div>
-    } @empty {
-      <p>Aucun utilisateur trouvé</p>
-    }
-  @for (user of users(); track user.id) {
-      <div class="user-card">
-        <p><strong>{{ user.name }}</strong> - {{ user.email }}</p>
-        <button (click)="deleteUser(user.id)" [disabled]="isDeleting() === user.id">
-          {{ isDeleting() === user.id ? 'Suppression...' : 'Supprimer'}}
-        </button>
-      </div>
-    } @empty {
-      <p>Aucun utilisateur trouvé</p>
-    }
-  @for (user of users(); track user.id) {
-      <div class="user-card">
-        <p><strong>{{ user.name }}</strong> - {{ user.email }}</p>
-        <button (click)="deleteUser(user.id)" [disabled]="isDeleting() === user.id">
-          {{ isDeleting() === user.id ? 'Suppression...' : 'Supprimer'}}
-        </button>
+        <button (click)="deleteUser(user.id)">Supprimer</button>
       </div>
     } @empty {
       <p>Aucun utilisateur trouvé</p>

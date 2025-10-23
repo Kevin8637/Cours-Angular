@@ -3,5 +3,5 @@ export type User = {
   name: string;
   email: string;
   age?: number;
-  isActive: boolean;
+  isActive?: boolean;
 }

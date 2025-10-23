@@ -4,11 +4,12 @@ import { ProductCard } from '../product-card/product-card';
 import {ProductFilter} from '../product-filter/product-filter';
 import {Product} from '../../services/models/product.model';
 import {ProductApi} from '../../services/product-api';
+import {CartSummary} from '../../../cart/components/cart-summary/cart-summary';
 
 
 @Component({
   selector: 'app-product-list',
-  imports: [CommonModule, ProductCard, ProductFilter],
+  imports: [CommonModule, ProductCard, ProductFilter, CartSummary],
   templateUrl: './product-list.html',
   styleUrls: ['./product-list.scss']
 })
@@ -18,7 +19,6 @@ export class ProductList implements OnInit {
   products = signal<Product[]>([]);
   isLoading = signal<boolean>(false);
   errorMessage = signal<string | null>(null);
-  cartItems: Product[] = [];
   favoriteIds: number[] = [];
 
   categoryProducts = signal("");
@@ -47,9 +47,6 @@ export class ProductList implements OnInit {
     this.categoryProducts.set(category);
   }
 
-  onProductAddedToCart(product: Product): void {
-    this.cartItems.push(product);
-  }
 
   onProductAddedToFavorites(product:Product): void {
     this.favoriteIds.push(product.id);
@@ -74,10 +71,6 @@ export class ProductList implements OnInit {
 
   isInFavorites(productId: number):boolean{
     return this.favoriteIds.includes(productId);
-  }
-
-  getCartCount(): number {
-    return this.cartItems.length;
   }
 
   getFavoritesCount(): number {

@@ -1,5 +1,6 @@
-import {Component, computed, effect, input, output} from '@angular/core';
+import {Component, computed, effect, inject, input, output} from '@angular/core';
 import {Product} from '../../services/models/product.model';
+import {CartStore} from '../../../cart/services/cart.store';
 
 
 @Component({
@@ -11,10 +12,11 @@ import {Product} from '../../services/models/product.model';
 })
 
 export class ProductCard {
+  cartStore = inject(CartStore);
+
   product = input.required<Product>();
   isFavorite = input<boolean>(false);
   // reviewAdded = output<{productId: number, rating: number, comment: string}>();
-  productAddedToCart = output<Product>();
   productAddedToFavorites = output<Product>();
   productRemovedFromFavorites = output<Product>();
 
@@ -27,7 +29,18 @@ export class ProductCard {
   }
 
   onAddToCart(): void {
-    this.productAddedToCart.emit(this.product());
+    const newProduct: Product = {
+      id : this.product().id,
+      name : this.product().name,
+      description: this.product().description,
+      price : this.product().price,
+      imageUrl : this.product().imageUrl,
+      category : this.product().category,
+      inStock : this.product().inStock,
+      rating : this.product().rating
+    }
+    this.cartStore.addToCart(newProduct);
+    console.log(newProduct);
   }
 
   onToggleFavorite(): void {

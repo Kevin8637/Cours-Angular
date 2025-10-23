@@ -1,36 +1,38 @@
-<div class="product-list-container">
-  <div class="header">
-    <h2>Notre catalogue</h2>
-    <div class="counters">
-      <span class="counter">🛒 Panier: {{ getCartCount() }}</span>
-      <span class="counter">❤️ Favoris: {{ getFavoritesCount() }}</span>
+<div class="product-body">
+  <div class="product-list-container">
+    <div class="header">
+      <h2>Notre catalogue</h2>
+      <div class="counters">
+        <span class="counter">❤️ Favoris: {{ getFavoritesCount() }}</span>
+      </div>
     </div>
+    <app-product-filter
+      (categoryProductsFiltered)="onFilteredProducts($event)">
+    </app-product-filter>
+
+    @if (filteredProducts().length > 0) {
+      <div class="list-product">
+        @for (product of filteredProducts(); track product.id) {
+          <app-product-card
+            [product]="product"
+            [isFavorite]="isInFavorites(product.id)"
+            (productAddedToFavorites)="onProductAddedToFavorites($event)"
+            (productRemovedFromFavorites)="onProductRemovedFromFavorites($event)">
+            <!--          (reviewAdded)="onNotationAdded($event)"-->
+          </app-product-card>
+        }
+      </div>
+
+      <div class="product-stats">
+        <p><strong>{{ getTotalProducts() }}</strong> produits au total</p>
+        <p><strong>{{ getInStockCount() }}</strong> produits en stock</p>
+        <p><strong>{{ getFavoritesCount() }}</strong> produits favoris</p>
+      </div>
+    } @else {
+      <p class="no-products">Aucun produit disponible pour le moment</p>
+    }
   </div>
-  <app-product-filter
-  (categoryProductsFiltered)="onFilteredProducts($event)">
-  </app-product-filter>
-
-  @if (filteredProducts().length > 0) {
-    <div class="list-product">
-      @for (product of filteredProducts(); track product.id) {
-        <app-product-card
-          [product]="product"
-          [isFavorite]="isInFavorites(product.id)"
-          (productAddedToCart)="onProductAddedToCart($event)"
-          (productAddedToFavorites)="onProductAddedToFavorites($event)"
-          (productRemovedFromFavorites)="onProductRemovedFromFavorites($event)">
-<!--          (reviewAdded)="onNotationAdded($event)"-->
-        </app-product-card>
-      }
-    </div>
-
-    <div class="product-stats">
-      <p><strong>{{ getTotalProducts() }}</strong> produits au total</p>
-      <p><strong>{{ getInStockCount() }}</strong> produits en stock</p>
-      <p><strong>{{ getCartCount() }}</strong> articles dans le panier</p>
-      <p><strong>{{ getFavoritesCount() }}</strong> produits favoris</p>
-    </div>
-  } @else {
-    <p class="no-products">Aucun produit disponible pour le moment</p>
-  }
+  <aside class="cart">
+    <app-cart-summary></app-cart-summary>
+  </aside>
 </div>
