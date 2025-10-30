@@ -6,7 +6,7 @@
     "price": 89.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "High-Tech",
-    "inStock": true,
+    "stock": 76,
     "rating": 4.5
   },
   {
@@ -16,7 +16,7 @@
     "price": 129.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "High-Tech",
-    "inStock": false,
+    "stock": 0,
     "rating": 4.3
   },
   {
@@ -26,7 +26,7 @@
     "price": 39.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Mode",
-    "inStock": true,
+    "stock": 12,
     "rating": 4.7
   },
   {
@@ -36,7 +36,7 @@
     "price": 24.50,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Maison",
-    "inStock": true,
+    "stock": 48,
     "rating": 4.2
   },
   {
@@ -46,7 +46,7 @@
     "price": 29.95,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Sport",
-    "inStock": true,
+    "stock": 65,
     "rating": 4.6
   },
   {
@@ -56,7 +56,7 @@
     "price": 19.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Maison",
-    "inStock": true,
+    "stock": 34,
     "rating": 4.8
   },
   {
@@ -66,7 +66,7 @@
     "price": 79.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Informatique",
-    "inStock": true,
+    "stock": 92,
     "rating": 4.4
   },
   {
@@ -76,7 +76,7 @@
     "price": 64.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Sport",
-    "inStock": true,
+    "stock": 77,
     "rating": 4.5
   },
   {
@@ -86,7 +86,7 @@
     "price": 22.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Maison",
-    "inStock": false,
+    "stock": 0,
     "rating": 4.6
   },
   {
@@ -96,7 +96,7 @@
     "price": 54.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Mode",
-    "inStock": true,
+    "stock": 41,
     "rating": 4.3
   },
   {
@@ -106,7 +106,7 @@
     "price": 34.50,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Cuisine",
-    "inStock": true,
+    "stock": 19,
     "rating": 4.7
   },
   {
@@ -116,7 +116,7 @@
     "price": 18.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Beauté",
-    "inStock": true,
+    "stock": 64,
     "rating": 4.8
   },
   {
@@ -126,7 +126,7 @@
     "price": 49.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "High-Tech",
-    "inStock": true,
+    "stock": 87,
     "rating": 4.4
   },
   {
@@ -136,7 +136,7 @@
     "price": 14.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Maison",
-    "inStock": true,
+    "stock": 56,
     "rating": 4.6
   },
   {
@@ -146,7 +146,7 @@
     "price": 29.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Informatique",
-    "inStock": true,
+    "stock": 71,
     "rating": 4.5
   },
   {
@@ -156,7 +156,7 @@
     "price": 59.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Beauté",
-    "inStock": false,
+    "stock": 0,
     "rating": 4.7
   },
   {
@@ -166,7 +166,7 @@
     "price": 199.00,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "High-Tech",
-    "inStock": true,
+    "stock": 54,
     "rating": 4.3
   },
   {
@@ -176,7 +176,7 @@
     "price": 44.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Beauté",
-    "inStock": true,
+    "stock": 89,
     "rating": 4.6
   },
   {
@@ -186,7 +186,7 @@
     "price": 27.50,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Cuisine",
-    "inStock": true,
+    "stock": 23,
     "rating": 4.5
   },
   {
@@ -196,7 +196,7 @@
     "price": 19.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Informatique",
-    "inStock": true,
+    "stock": 59,
     "rating": 4.8
   },
   {
@@ -206,7 +206,7 @@
     "price": 32.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Cuisine",
-    "inStock": true,
+    "stock": 83,
     "rating": 4.7
   },
   {
@@ -216,7 +216,7 @@
     "price": 24.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Mode",
-    "inStock": false,
+    "stock": 0,
     "rating": 4.4
   },
   {
@@ -226,7 +226,7 @@
     "price": 89.00,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Sport",
-    "inStock": true,
+    "stock": 27,
     "rating": 4.5
   },
   {
@@ -236,7 +236,7 @@
     "price": 34.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Maison",
-    "inStock": true,
+    "stock": 47,
     "rating": 4.8
   },
   {
@@ -246,7 +246,7 @@
     "price": 42.00,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Loisirs",
-    "inStock": true,
+    "stock": 38,
     "rating": 4.6
   },
   {
@@ -256,7 +256,7 @@
     "price": 49.50,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Maison",
-    "inStock": true,
+    "stock": 32,
     "rating": 4.7
   },
   {
@@ -266,7 +266,7 @@
     "price": 21.90,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Bureau",
-    "inStock": true,
+    "stock": 53,
     "rating": 4.4
   },
   {
@@ -276,7 +276,7 @@
     "price": 149.00,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "High-Tech",
-    "inStock": true,
+    "stock": 90,
     "rating": 4.5
   },
   {
@@ -286,7 +286,7 @@
     "price": 14.50,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Accessoires",
-    "inStock": false,
+    "stock": 0,
     "rating": 4.2
   },
   {
@@ -296,7 +296,7 @@
     "price": 25.99,
     "imageUrl": "https://bubbleshowroom.eu/wp-content/uploads/2023/06/default-product-image.png",
     "category": "Beauté",
-    "inStock": false,
+    "stock": 0,
     "rating": 4.8
   }
 ]

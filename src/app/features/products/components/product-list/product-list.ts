@@ -82,6 +82,6 @@ export class ProductList implements OnInit {
   }
 
   getInStockCount(): number {
-    return this.products().filter(p => p.inStock).length;
+    return this.products().filter(p => p.stock).length;
   }
 }

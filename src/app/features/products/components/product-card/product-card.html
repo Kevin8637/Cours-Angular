@@ -15,9 +15,11 @@
       <span class="product-rating">⭐ {{ product().rating }}/5</span>
     </div>
 
+    <div class="product-stock"><strong>{{product().stock}}</strong> articles restants</div>
+
     <div class="product-buttons">
       <div class="product-actions">
-        @if (product().inStock) {
+        @if (product().stock) {
           <button (click)="onAddToCart()" class="btn-primary">
             Ajouter au panier
           </button>

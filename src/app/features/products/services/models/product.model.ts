@@ -17,7 +17,8 @@ export type Product = {
   price: number;
   imageUrl: string;
   category: CategoryOfProduct;
-  inStock: boolean;
+  stock: number;
   rating: number;
+  active : boolean;
   reviews? : number[];
 }

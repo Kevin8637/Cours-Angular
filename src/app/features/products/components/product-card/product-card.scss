@@ -8,7 +8,7 @@
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
   position : relative;
-  height: 450px;
+  height: fit-content;
 }
 
 .product-description{
@@ -104,4 +104,8 @@ opacity: .5;
   display: flex;
   justify-content: space-evenly;
   flex-direction: row;
+}
+
+.product-stock{
+  margin : 5px;
 }

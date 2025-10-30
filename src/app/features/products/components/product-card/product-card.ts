@@ -36,7 +36,8 @@ export class ProductCard {
       price : this.product().price,
       imageUrl : this.product().imageUrl,
       category : this.product().category,
-      inStock : this.product().inStock,
+      active : this.product().active,
+      stock : this.product().stock,
       rating : this.product().rating
     }
     this.cartStore.addToCart(newProduct);
