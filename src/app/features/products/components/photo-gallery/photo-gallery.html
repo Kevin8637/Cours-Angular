@@ -1,0 +1,39 @@
+<div class="container">
+  <div class="header">
+    <h1>Liste des images :</h1>
+    <button (click)="refreshPhotos()">Recharger</button>
+  </div>
+
+  @if (isLoading()) {
+    <div class="loading">
+      <p>Chargement des images...</p>
+    </div>
+  }
+
+  @if (error()) {
+    <div class="error">
+      <p>{{ error() }}</p>
+    </div>
+  }
+
+  @if (!isLoading() && !error() && photos().length > 0) {
+    <div class="photos-grid">
+      @for (photo of photos(); track photo.id) {
+        <div class="photo-cards">
+          <h3>{{ photo.author }}</h3>
+          <div class="img-content">
+            <button (click)="toggleLike(photo.id)" class="liked-btn">
+              {{ isLiked(photo.id) ? '❤️' : '🤍' }}
+            </button>
+            <img
+              ngSrc="{{ photo.download_url }}"
+              alt="{{ photo.author }}"
+              width="300"
+              height="300"
+            />
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>

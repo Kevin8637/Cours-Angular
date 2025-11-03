@@ -1,0 +1,53 @@
+.login-block{
+  border-radius: 20px;
+  width : 60%;
+  height : 80%;
+  display: flex;
+  justify-self: center;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  margin-top: 20px;
+}
+
+h2 {
+  position: absolute;
+  margin-top : 30px;
+}
+
+
+.image-section{
+  width : 45%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  border-radius: 20px 0 0 20px;
+}
+
+.form-section{
+  width : 55%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-form{
+  display: flex;
+  flex-direction: column;
+  width : 70%;
+  height : 50%;
+  margin : auto;
+  justify-content: space-evenly;
+}
+
+label {
+  display : flex;
+  flex-direction : column;
+}
+
+input{
+  border-radius: 5px;
+  height : 30px;
+  width : 200px;
+  margin-right : 5px;
+}
+
+input.ng-invalid.ng-touched{
+  border: 2px solid red;
+}

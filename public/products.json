@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "name": "Casque Bluetooth sans fil",
+    "description": "Casque audio stéréo avec réduction de bruit active et autonomie de 30h.",
+    "price": 89.99,
+    "imageUrl": "https://png.pngtree.com/png-vector/20250321/ourmid/pngtree-wireless-headphone-png-image_15830312.png",
+    "category": "High-Tech",
+    "stock": 76,
+    "rating": 4.5
+  },
+  {
+    "id": 2,
+    "name": "Montre connectée SportFit X3",
+    "description": "Montre connectée avec capteur cardiaque, GPS intégré et suivi du sommeil.",
+    "price": 129.90,
+    "imageUrl": "https://png.pngtree.com/png-vector/20241101/ourmid/pngtree-trendy-smartwatch-with-notifications-and-apps-png-image_14218279.png",
+    "category": "High-Tech",
+    "stock": 0,
+    "rating": 4.3
+  },
+  {
+    "id": 3,
+    "name": "Sweat à capuche coton bio",
+    "description": "Sweat doux et respirant en coton biologique, disponible en plusieurs tailles.",
+    "price": 39.99,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240202/ourmid/pngtree-white-folded-sweatshirt-mockup-png-image_11588537.png",
+    "category": "Mode",
+    "stock": 12,
+    "rating": 4.7
+  },
+  {
+    "id": 4,
+    "name": "Lampe de chevet tactile LED",
+    "description": "Lampe LED à intensité variable avec fonction tactile et chargeur USB intégré.",
+    "price": 24.50,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240716/ourmid/pngtree-chic-bedside-table-lamp-with-dimmable-led-for-perfect-night-light-png-image_13120788.png",
+    "category": "Maison",
+    "stock": 48,
+    "rating": 4.2
+  },
+  {
+    "id": 5,
+    "name": "Tapis de yoga antidérapant",
+    "description": "Tapis de yoga épais et confortable, parfait pour la méditation et le fitness.",
+    "price": 29.95,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240204/ourmid/pngtree-yoga-mat-symbol-png-image_11612814.png",
+    "category": "Sport",
+    "stock": 65,
+    "rating": 4.6
+  },
+  {
+    "id": 6,
+    "name": "Bouteille isotherme inox 750ml",
+    "description": "Garde vos boissons chaudes pendant 12h et froides pendant 24h.",
+    "price": 19.90,
+    "imageUrl": "https://www.pub54.fr/wp-content/uploads/2023/08/18-bouteille-isotherme-pas-cher.png",
+    "category": "Maison",
+    "stock": 34,
+    "rating": 4.8
+  },
+  {
+    "id": 7,
+    "name": "Clavier mécanique RGB",
+    "description": "Clavier gamer avec rétroéclairage RGB personnalisable et switches tactiles.",
+    "price": 79.99,
+    "imageUrl": "https://cdn.cultura.com/cdn-cgi/image/width=830/media/pim/3015220967658.png",
+    "category": "Informatique",
+    "stock": 92,
+    "rating": 4.4
+  },
+  {
+    "id": 8,
+    "name": "Chaussures de running AirStep",
+    "description": "Chaussures de sport légères avec semelle amortissante et design moderne.",
+    "price": 64.90,
+    "imageUrl": "https://png.pngtree.com/png-vector/20230501/ourmid/pngtree-sneakers-running-shoes-color-png-image_7078201.png",
+    "category": "Sport",
+    "stock": 77,
+    "rating": 4.5
+  },
+  {
+    "id": 9,
+    "name": "Coffret bougies parfumées",
+    "description": "Lot de 4 bougies parfumées naturelles à la cire de soja, senteurs variées.",
+    "price": 22.99,
+    "imageUrl": "https://png.pngtree.com/png-vector/20251010/ourmid/pngtree-scented-candle-with-wooden-wick-on-white-background-png-image_17677545.webp",
+    "category": "Maison",
+    "stock": 0,
+    "rating": 4.6
+  },
+  {
+    "id": 10,
+    "name": "Sac à dos urbain étanche",
+    "description": "Sac à dos ergonomique et imperméable, idéal pour le travail ou les voyages.",
+    "price": 54.99,
+    "imageUrl": "https://images.hardloop.fr/770173-large_default/db-journey-essential-rolltop-backpack-sac-a-dos-urbain.jpg",
+    "category": "Mode",
+    "stock": 41,
+    "rating": 4.3
+  },
+  {
+    "id": 11,
+    "name": "Cafetière italienne inox 6 tasses",
+    "description": "Cafetière moka compatible induction, design élégant et poignée ergonomique.",
+    "price": 34.50,
+    "imageUrl": "https://media.cecotec.cloud/01619/mimoka-1200-shiny_1.png:md",
+    "category": "Cuisine",
+    "stock": 19,
+    "rating": 4.7
+  },
+  {
+    "id": 12,
+    "name": "Crème hydratante visage bio",
+    "description": "Crème hydratante à l'aloe vera et huile de jojoba, pour tous types de peau.",
+    "price": 18.90,
+    "imageUrl": "https://png.pngtree.com/png-vector/20230424/ourmid/pngtree-face-cream-beauty-skin-care-women-transparent-png-image_6722238.png",
+    "category": "Beauté",
+    "stock": 64,
+    "rating": 4.8
+  },
+  {
+    "id": 13,
+    "name": "Enceinte Bluetooth portable",
+    "description": "Enceinte sans fil compacte avec basse puissante et résistance à l’eau IPX7.",
+    "price": 49.99,
+    "imageUrl": "https://www.moxie-accessoires.com/3028-large_default/enceinte-bluetooth-5w-moxie-tweet-noir.jpg",
+    "category": "High-Tech",
+    "stock": 87,
+    "rating": 4.4
+  },
+  {
+    "id": 14,
+    "name": "Coussin décoratif velours",
+    "description": "Coussin doux en velours 45x45 cm avec housse amovible et lavable.",
+    "price": 14.99,
+    "imageUrl": "https://www.lelitcabane.fr/cdn/shop/files/brown-sugar-bolster-2-1.png?v=1699006282&width=1500",
+    "category": "Maison",
+    "stock": 56,
+    "rating": 4.6
+  },
+  {
+    "id": 15,
+    "name": "Souris ergonomique sans fil",
+    "description": "Souris confortable avec capteur optique précis et batterie rechargeable.",
+    "price": 29.90,
+    "imageUrl": "https://png.pngtree.com/png-vector/20250520/ourmid/pngtree-glossy-white-ergonomic-wireless-mouse-png-image_16336649.png",
+    "category": "Informatique",
+    "stock": 71,
+    "rating": 4.5
+  },
+  {
+    "id": 16,
+    "name": "Parfum floral Élégance",
+    "description": "Eau de parfum pour femme, notes de jasmin et vanille, 50 ml.",
+    "price": 59.90,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240803/ourmid/pngtree-women-s-perfume-bottle-png-image_13351890.png",
+    "category": "Beauté",
+    "stock": 0,
+    "rating": 4.7
+  },
+  {
+    "id": 17,
+    "name": "Tablette 10 pouces HD",
+    "description": "Tablette Android avec écran HD, 64 Go de stockage et Wi-Fi double bande.",
+    "price": 199.00,
+    "imageUrl": "https://www.winmate.com/upload/Product/L4/Product-M101P-ME_45-L4-I.png",
+    "category": "High-Tech",
+    "stock": 54,
+    "rating": 4.3
+  },
+  {
+    "id": 18,
+    "name": "Tondeuse barbe rechargeable",
+    "description": "Tondeuse sans fil avec 5 longueurs de coupe et autonomie de 90 minutes.",
+    "price": 44.99,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240601/ourmid/pngtree-vector-hair-clippers-machine-png-image_12584662.png",
+    "category": "Beauté",
+    "stock": 89,
+    "rating": 4.6
+  },
+  {
+    "id": 19,
+    "name": "Casserole inox 20 cm",
+    "description": "Casserole en acier inoxydable compatible tous feux, y compris induction.",
+    "price": 27.50,
+    "imageUrl": "https://www.scholtes.com/wp-content/uploads/2023/08/768_CASSEROLE_SOCA16I_THREEQUARTER-1.png",
+    "category": "Cuisine",
+    "stock": 23,
+    "rating": 4.5
+  },
+  {
+    "id": 20,
+    "name": "Tapis de souris XXL gamer",
+    "description": "Tapis grand format antidérapant avec coutures renforcées, 90x40 cm.",
+    "price": 19.99,
+    "imageUrl": "https://img.endgamegear.com/images/GAMA-952/d54e7db9de7fc16f6645b19c9bcd9cf2.jpg",
+    "category": "Informatique",
+    "stock": 59,
+    "rating": 4.8
+  },
+  {
+    "id": 21,
+    "name": "Set de 6 verres à vin",
+    "description": "Verres à vin en cristal sans plomb, élégants et résistants au lave-vaisselle.",
+    "price": 32.90,
+    "imageUrl": "https://www.abclocation.com/154-thickbox_default/verre-a-vin-oenologue-25-cl.jpg",
+    "category": "Cuisine",
+    "stock": 83,
+    "rating": 4.7
+  },
+  {
+    "id": 22,
+    "name": "Bracelet en cuir tressé",
+    "description": "Bracelet unisexe en cuir véritable avec fermoir magnétique en acier.",
+    "price": 24.90,
+    "imageUrl": "https://png.pngtree.com/recommend-works/png-clipart/20250117/ourmid/pngtree-simple-and-stylish-genuine-leather-bracelet-png-image_15236938.png",
+    "category": "Mode",
+    "stock": 0,
+    "rating": 4.4
+  },
+  {
+    "id": 23,
+    "name": "Tente de camping 2 places",
+    "description": "Tente légère et imperméable, facile à monter, parfaite pour le trekking.",
+    "price": 89.00,
+    "imageUrl": "https://static.vecteezy.com/system/resources/previews/044/812/744/non_2x/a-yellow-camping-tent-isolated-on-transparent-background-png.png",
+    "category": "Sport",
+    "stock": 27,
+    "rating": 4.5
+  },
+  {
+    "id": 24,
+    "name": "Diffuseur d’huiles essentielles",
+    "description": "Diffuseur ultrasonique avec éclairage LED et arrêt automatique.",
+    "price": 34.99,
+    "imageUrl": "https://png.pngtree.com/png-clipart/20240826/original/pngtree-fragrance-room-diffuser-png-image_15852036.png",
+    "category": "Maison",
+    "stock": 47,
+    "rating": 4.8
+  },
+  {
+    "id": 25,
+    "name": "Jeu de société Stratégia",
+    "description": "Jeu de plateau pour 2 à 6 joueurs, durée moyenne d'une partie : 15 minutes.",
+    "price": 42.00,
+    "imageUrl": "https://cdn.1001puzzles.fr/2730035-large_default/asmodee-zygtim0201fr-timeline-jeux-loisirs-clutch-box-fr.jpg",
+    "category": "Loisirs",
+    "stock": 38,
+    "rating": 4.6
+  },
+  {
+    "id": 26,
+    "name": "Oreiller mémoire de forme",
+    "description": "Oreiller ergonomique avec mousse à mémoire de forme et housse lavable.",
+    "price": 49.50,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240614/ourmid/pngtree-white-pillows-isolated-on-png-image_12747044.png",
+    "category": "Maison",
+    "stock": 32,
+    "rating": 4.7
+  },
+  {
+    "id": 27,
+    "name": "Stylo plume noir et or",
+    "description": "Stylo plume élégant en acier inoxydable, livré avec cartouche bleue.",
+    "price": 21.90,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240607/ourmid/pngtree-exquisite-fountain-pen-in-gold-and-black-set-png-image_12592524.png",
+    "category": "Bureau",
+    "stock": 53,
+    "rating": 4.4
+  },
+  {
+    "id": 28,
+    "name": "Appareil photo instantané Snapix",
+    "description": "Appareil photo instantané avec impression thermique et carte SD 32 Go.",
+    "price": 149.00,
+    "imageUrl": "https://png.pngtree.com/png-vector/20240905/ourmid/pngtree-black-dslr-camera-with-large-lens-clipart-illustration-stock-photo-png-image_13758787.png",
+    "category": "High-Tech",
+    "stock": 90,
+    "rating": 4.5
+  },
+  {
+    "id": 29,
+    "name": "Porte-clés multifonction",
+    "description": "Petit outil en acier 5-en-1 : tournevis, décapsuleur, couteau, lime, clé.",
+    "price": 14.50,
+    "imageUrl": "https://www.laboiteaobjets.com/905937-product_main_2x/porte-cles-multifonctions-polty-.jpg",
+    "category": "Accessoires",
+    "stock": 0,
+    "rating": 4.2
+  },
+  {
+    "id": 30,
+    "name": "Ensemble de pinceaux maquillage",
+    "description": "Set de 10 pinceaux professionnels pour le teint, les yeux et les lèvres.",
+    "price": 25.99,
+    "imageUrl": "https://cdn-icons-png.flaticon.com/512/3718/3718693.png",
+    "category": "Beauté",
+    "stock": 0,
+    "rating": 4.8
+  }
+]
