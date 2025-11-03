@@ -1,32 +1,29 @@
-import {Component, inject} from '@angular/core';
+import {Component, computed, inject} from '@angular/core';
 import {NgOptimizedImage} from '@angular/common';
 import {CartStore} from '../../services/cart.store';
 import {RouterLink} from '@angular/router';
+import {QuantityProduct} from '../quantity-product/quantity-product';
+import {CartFacade} from '../../services/cart.facade';
+import {CartItem} from '../cart-item/cart-item';
 
 @Component({
   selector: 'app-cart-summary',
   imports: [
     NgOptimizedImage,
-    RouterLink
+    RouterLink,
+    QuantityProduct,
+    CartItem
   ],
   templateUrl: './cart-summary.html',
   styleUrl: './cart-summary.scss'
 })
 export class CartSummary {
-  private cartStore = inject(CartStore)
-
-  productsInCart = this.cartStore.cart;
-
-  totalPriceOfProducts = this.cartStore.totalPrice;
-
-  deleteProduct(id: number) {
-    const first = this.productsInCart()[0];
-    if (first) {
-      this.cartStore.removeFromCart(id);
-    }
-  }
+  private cartFacade = inject(CartFacade);
+  productsInCart = computed(() => this.cartFacade.cart());
+  totalPriceOfProducts = computed(() => this.cartFacade.total());
+  count = computed(() => this.cartFacade.count());
 
   clearCart(): void {
-    this.cartStore.clearCart();
+    this.cartFacade.clearCart();
   }
 }

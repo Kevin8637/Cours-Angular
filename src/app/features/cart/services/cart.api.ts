@@ -5,7 +5,7 @@ import {BaseApi} from '../../../shared/services/base.api';
 @Injectable({
   providedIn: 'root'
 })
-export class CartApi {
+export class CartApi{
 
   getCart(){
     console.log("api get cart")

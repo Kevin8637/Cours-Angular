@@ -5,11 +5,10 @@
   align-items: center;
 }
 
-.product-container{
+.infos-and-buttons-of-cart{
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  margin : 10px 5px;
 }
 
 img {
@@ -18,25 +17,6 @@ img {
 
 h2{
   margin: 20px auto;
-}
-.product-container{
-  display: flex;
-  flex-direction: column;
-  border : 1px solid black;
-  border-radius: 10px;
-  width : 90%;
-}
-
-.information-container{
-  display: flex;
-  flex-direction: row;
-}
-
-.title-product{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width : 90%;
 }
 
 .title-product button{
@@ -49,5 +29,9 @@ h2{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width : 70%;
+  width : 100%;
+}
+
+button {
+  padding : 10px 18px;
 }
