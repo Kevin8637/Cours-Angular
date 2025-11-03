@@ -1,4 +1,4 @@
-{
+  {
   "name": "e-shop",
   "version": "0.0.0",
   "scripts": {
@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:unit": "ng test --watch=false",
+    "test:integration": "ng test --confirguration integration --watch=false",
+    "cypress:ci" : "cypress run"
   },
   "prettier": {
     "printWidth": 100,
@@ -22,12 +25,22 @@
   },
   "private": true,
   "dependencies": {
+    "@angular/animations": "^20.3.0",
+    "@angular/cdk": "^20.2.7",
     "@angular/common": "^20.3.0",
     "@angular/compiler": "^20.3.0",
     "@angular/core": "^20.3.0",
     "@angular/forms": "^20.3.0",
+    "@angular/material": "^20.2.7",
     "@angular/platform-browser": "^20.3.0",
     "@angular/router": "^20.3.0",
+    "@coreui/angular": "~5.5.16",
+    "@coreui/coreui": "^5.4.3",
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-angular": "~5.5.16",
+    "@popperjs/core": "~2.11.8",
+    "@primeuix/themes": "^1.2.5",
+    "primeng": "^20.2.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },

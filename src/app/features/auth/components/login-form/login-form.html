@@ -1,0 +1,29 @@
+<div class="login-block">
+  <section class="form-section">
+    <h2>Se connecter</h2>
+    <form [formGroup]="loginForm" class="login-form">
+      <label for="username">
+        Identifiant
+        <input id="username" formControlName="username" [attr.aria-invalid]="loginForm.controls.username.invalid">
+      @if (loginForm.controls.username.invalid && loginForm.controls.username.touched){
+        <p class="error">L'identifiant est requis</p>
+      }
+      </label>
+
+      <label for="password">
+        Mot de passe
+        <input id="password" type="password" formControlName="password" [attr.aria-invalid]="loginForm.controls.password.invalid">
+        @if (loginForm.controls.password.invalid && loginForm.controls.password.touched){
+          <p class="error">Le mot de passe est incorrect</p>
+        }
+      </label>
+      <button type="submit" [disabled]="loginForm.invalid"> Se connecter</button>
+    </form>
+    <nav>
+      <a routerLink="/auth/register">S'inscrire</a>
+    </nav>
+  </section>
+  <section class="image-section">
+    <h2>Section Image</h2>
+  </section>
+</div>
