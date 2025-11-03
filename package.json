@@ -1,4 +1,4 @@
-{
+  {
   "name": "e-shop",
   "version": "0.0.0",
   "scripts": {
@@ -8,7 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "test:unit": "ng test --watch=false",
-    "test:integration": "ng test --confirguration integration --watch=false"
+    "test:integration": "ng test --confirguration integration --watch=false",
+    "cypress:ci" : "cypress run"
   },
   "prettier": {
     "printWidth": 100,
