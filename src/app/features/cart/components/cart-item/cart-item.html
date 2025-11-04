@@ -1,0 +1,14 @@
+<div class="product-container">
+  <div class="title-product">
+    <h3>{{cartItem().product.name}}</h3>
+    <button (click)="removeItem(cartItem().product.id)">🗑️</button>
+  </div>
+  <div class="information-container">
+    <img ngSrc='{{cartItem().product.imageUrl}}' alt="" width="100" height="100">
+    <div class="information-product">
+      <p></p>
+      <app-quantity-product [cartItem]="cartItem()"></app-quantity-product>
+      <p><strong>Prix : </strong>{{cartItem().product.price}}€</p>
+    </div>
+  </div>
+</div>
