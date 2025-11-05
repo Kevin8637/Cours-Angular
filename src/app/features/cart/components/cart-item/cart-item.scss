@@ -1,0 +1,27 @@
+.product-container{
+  display: flex;
+  flex-direction: column;
+  border : 1px solid black;
+  border-radius: 10px;
+  width : 90%;
+  align-items: center;
+  margin : 10px 5px;
+}
+
+.title-product{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width : 90%;
+  align-items: center;
+}
+
+.information-container{
+  display: flex;
+  flex-direction: row;
+}
+
+button {
+  padding: 5px;
+  height: 30px;
+}
