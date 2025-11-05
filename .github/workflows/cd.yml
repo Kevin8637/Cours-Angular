@@ -70,7 +70,7 @@ jobs:
           EOF
 
       - name: Notify Discord
-        uses: appleboy/discord-action@v1
+        uses: appleboy/discord-action@master
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
           message: Déploirement branch ${{ github.ref }} terminé pour le commit ${{ github.sha }}
