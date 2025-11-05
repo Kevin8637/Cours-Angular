@@ -46,7 +46,7 @@ jobs:
           context: .
           file: ${{ steps.set_tag.outputs.dockerfile }}
           push: true
-          tags: kevin8637/angular-app:${{ steps.set_tag.outputs.tag }}
+          tags: kevin8637/e-shop:${{ steps.set_tag.outputs.tag }}
 
   deploy :
     name: 🚀 Deploy to VPS
