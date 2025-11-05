@@ -70,7 +70,8 @@ jobs:
           EOF
 
       - name: Notify Discord
-        uses: appleboy/discord-action@master
+        uses: stegzilla/discord-notify@v2
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
+          title: New PR opened
           message: Déploirement branch ${{ github.ref }} terminé pour le commit ${{ github.sha }}
