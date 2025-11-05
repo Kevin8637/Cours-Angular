@@ -73,4 +73,4 @@ jobs:
         uses: appleboy/discord-action@master
         with:
           webhook_url: ${{ secrets.DISCORD_WEBHOOK }}
-          message: Déploirement branch ${{ github.ref }} terminé pour le commit ${{ github.sha }}
+          message: 'Déploiement branch ${{ github.ref }} terminé pour le commit ${{ github.sha }}''
