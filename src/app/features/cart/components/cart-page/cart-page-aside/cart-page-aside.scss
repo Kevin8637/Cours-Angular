@@ -1,0 +1,27 @@
+aside {
+  height : fit-content;
+  border : 1px solid lightgray;
+  padding : 24px 24px;
+  background-color: #f1e6e6;
+  position: sticky;
+  top: 80px;
+}
+
+p {
+  margin : 0;
+}
+
+.price-details{
+  display : flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+button {
+  width : 80%;
+  padding : 20px;
+  display : flex;
+  justify-content: center;
+  justify-self: center;
+  margin : 10px 0 0 0;
+}
