@@ -11,17 +11,17 @@ export class ProductFilter {
   categoryProductsFiltered = output<string>()
 
   clothingCategory():void {
-    this.products.set("clothing");
+    this.products.set("Mode");
     this.onFilter();
   }
 
   gamingCategory():void {
-    this.products.set("gaming");
+    this.products.set("High-Tech");
     this.onFilter();
   }
 
   homeCategory():void {
-    this.products.set("home");
+    this.products.set("Maison");
     this.onFilter();
   }
 
