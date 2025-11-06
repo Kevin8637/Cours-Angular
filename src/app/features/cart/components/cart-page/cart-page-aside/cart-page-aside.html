@@ -1,0 +1,21 @@
+<aside>
+  <div class="price-details">
+    <p><strong>TOTAL ARTICLES HT</strong></p>
+    <p>{{ totalOfArticles().toFixed(2) }}€</p>
+  </div>
+  <div class="price-details">
+    <p><strong>LIVRAISON HT</strong></p>
+    <p>{{ deliveryCost.toFixed(2) }}€</p>
+  </div>
+  <div class="price-details">
+    <p><strong>TVA</strong></p>
+    <p>{{ VATCost().toFixed(2) }}€</p>
+  </div>
+  <hr/>
+  <div class="price-details">
+    <h3><strong>TOTAL COMMANDE TTC</strong></h3>
+    <p>{{ totalOfOrder().toFixed(2) }}€</p>
+  </div>
+  <button>VALIDER LA COMMANDE</button>
+</aside>
+
