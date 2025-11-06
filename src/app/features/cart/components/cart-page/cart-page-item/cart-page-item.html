@@ -1,0 +1,22 @@
+@if (productsInCart().length <= 0) {
+  <h1>Votre panier est vide</h1>
+  <div class="body-content-without-product">
+    <p>Besoin d'inspirations ?</p>
+    <p>Consultez la liste de nos produits <a href="/products">ici</a></p>
+  </div>
+} @else {
+  <h1>Mon panier</h1>
+  <div class="body-content">
+    <div class="product-list">
+      @for (product of productsInCart(); track product.product.id) {
+        <div class="divider"></div>
+        <app-cart-item [cartItem]="product" [mode]="'summary'"></app-cart-item>
+      }
+    </div>
+    <div class="aside">
+      <app-cart-page-aside></app-cart-page-aside>
+    </div>
+  </div>
+}
+
+
