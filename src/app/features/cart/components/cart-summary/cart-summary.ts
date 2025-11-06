@@ -9,9 +9,7 @@ import {CartItem} from '../cart-item/cart-item';
 @Component({
   selector: 'app-cart-summary',
   imports: [
-    NgOptimizedImage,
     RouterLink,
-    QuantityProduct,
     CartItem
   ],
   templateUrl: './cart-summary.html',

@@ -20,4 +20,6 @@ export class CartItem {
   removeItem(id: number) {
     this.cartFacade.removeProductOfCart(id);
   }
+
+  mode = input<'default' | 'summary'>('default');
 }

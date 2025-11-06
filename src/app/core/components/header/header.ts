@@ -1,15 +1,21 @@
-import { Component } from '@angular/core';
-import {RouterLink, RouterLinkActive} from '@angular/router';
+import {Component, inject} from '@angular/core';
+import {Router} from '@angular/router';
+import {Navigation} from '../navigation/navigation';
+import {NgOptimizedImage} from '@angular/common';
 
 @Component({
   selector: 'app-header',
   imports: [
-    RouterLink,
-    RouterLinkActive
+    Navigation,
+    NgOptimizedImage
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss'
 })
 export class Header {
+  route = inject(Router);
 
+  redirectToMenu() {
+    this.route.navigate(['/'])
+}
 }
