@@ -7,12 +7,9 @@ import {
   ValidationErrors,
   Validators
 } from '@angular/forms';
-import {AddressesFormModel, RegisterFormModel} from '../../../../models/form-model';
-import {controls} from '@primeuix/themes/aura/picklist';
-import {NgOptimizedImage} from '@angular/common';
-import {IftaLabel} from 'primeng/iftalabel';
-import {InputText} from 'primeng/inputtext';
+import {RegisterFormModel} from '../../../../models/form-model';
 import {RouterLink} from '@angular/router';
+import {BaseApi} from '../../../../shared/services/base.api';
 
 @Component({
   selector: 'app-register-form',
@@ -24,15 +21,33 @@ import {RouterLink} from '@angular/router';
   styleUrl: './register-form.scss'
 })
 
-export class RegisterForm {
+export class RegisterForm extends BaseApi{
   protected fb = inject(NonNullableFormBuilder);
 
+  constructor() {
+    super('http://localhost:8080/auth');
+  }
+
+  postRegister(data: any){
+    console.log(data);
+    const payload = {
+      email: data.email,
+      password: data.password
+    }
+    return this.post('/register', payload);
+  }
+
+  onSubmit(){
+    const {email, password} = this.registerForm.value;
+    this.postRegister({email, password});
+  }
+
   registerForm: FormGroup<RegisterFormModel> = this.fb.group({
-    username: this.fb.control('', [Validators.minLength(3), Validators.required]),
+    // username: this.fb.control('', [Validators.minLength(3), Validators.required]),
     email: this.fb.control('', Validators.email),
     password: this.fb.control('', [Validators.required, Validators.minLength(6), Validators.pattern(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*.-]).{12,}$/)]),
     confirmPassword: this.fb.control('', [Validators.required ]),
-    phone: this.fb.control('+', Validators.pattern(/^\+\d{1,3}\s?\d{1,14}(\s?\d{1,4}){0,3}$/)),
+    // phone: this.fb.control('+', Validators.pattern(/^\+\d{1,3}\s?\d{1,14}(\s?\d{1,4}){0,3}$/)),
 
   }, {validators: this.checkPasswords.bind(this)});
 
@@ -43,12 +58,12 @@ export class RegisterForm {
     return password === confirmPassword ? null : { notSame: true };
   }
 
-  addresses = this.fb.array([
-    this.fb.control('', [Validators.required]),
-  ]);
-
-  addressesForm: FormGroup<AddressesFormModel> = this.fb.group({
-    addresses: this.addresses,
-  })
+  // addresses = this.fb.array([
+  //   this.fb.control('', [Validators.required]),
+  // ]);
+  //
+  // addressesForm: FormGroup<AddressesFormModel> = this.fb.group({
+  //   addresses: this.addresses,
+  // })
 
 }

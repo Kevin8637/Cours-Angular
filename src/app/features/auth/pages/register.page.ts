@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {RegisterForm} from '../components/register-form/register-form';
+import {BaseApi} from '../../../shared/services/base.api';
 
 @Component({
   selector: 'app-register.page',
@@ -13,5 +14,4 @@ import {RegisterForm} from '../components/register-form/register-form';
   styles: ``
 })
 export default class RegisterPage {
-
 }

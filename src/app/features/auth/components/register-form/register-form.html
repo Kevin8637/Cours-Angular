@@ -6,13 +6,13 @@
     <h2>S'inscrire</h2>
     <form [formGroup]="registerForm" class="register-form">
       <div class="input-section">
-        <label for="username">
-          Identifiant
-          <input id="username" formControlName="username" [attr.aria-invalid]="registerForm.controls.username.invalid">
-          @if (registerForm.controls.username.invalid && registerForm.controls.username.touched){
-            <p class="error">L'identifiant est requis</p>
-          }
-        </label>
+<!--        <label for="username">-->
+<!--          Identifiant-->
+<!--          <input id="username" formControlName="username" [attr.aria-invalid]="registerForm.controls.username.invalid">-->
+<!--          @if (registerForm.controls.username.invalid && registerForm.controls.username.touched){-->
+<!--            <p class="error">L'identifiant est requis</p>-->
+<!--          }-->
+<!--        </label>-->
 
         <label for="email">
           Email
@@ -38,27 +38,27 @@
         </label>
       </div>
 
-      <div class="input-section">
-        <label for="phone">
-          Téléphone
-          <input id="phone" formControlName="phone" [attr.aria-invalid]="registerForm.controls.phone.invalid">
-        @if (registerForm.controls.phone.invalid && registerForm.controls.phone.touched){
-          <p class="error">Le numéro de téléphone est incorrect</p>
-        }
-        </label>
-      </div>
+<!--      <div class="input-section">-->
+<!--        <label for="phone">-->
+<!--          Téléphone-->
+<!--          <input id="phone" formControlName="phone" [attr.aria-invalid]="registerForm.controls.phone.invalid">-->
+<!--        @if (registerForm.controls.phone.invalid && registerForm.controls.phone.touched){-->
+<!--          <p class="error">Le numéro de téléphone est incorrect</p>-->
+<!--        }-->
+<!--        </label>-->
+<!--      </div>-->
 
-      <form [formGroup]="addressesForm">
-        <div formArrayName="addresses">
-          @for (address of addresses.controls; track $index){
-            <input [formControlName]="$index" placeholder="Adresse">
-            <button type="button" (click)="addresses.removeAt($index)">🗑️</button>
-          }
-        </div>
-        <button type="button" (click)="addresses.push(fb.control(''))">Ajouter une adresse</button>
-      </form>
+<!--      <form [formGroup]="addressesForm">-->
+<!--        <div formArrayName="addresses">-->
+<!--          @for (address of addresses.controls; track $index){-->
+<!--            <input [formControlName]="$index" placeholder="Adresse">-->
+<!--            <button type="button" (click)="addresses.removeAt($index)">🗑️</button>-->
+<!--          }-->
+<!--        </div>-->
+<!--        <button type="button" (click)="addresses.push(fb.control(''))">Ajouter une adresse</button>-->
+<!--      </form>-->
 
-      <button type="submit" [disabled]="registerForm.invalid"> S'inscrire</button>
+      <button type="submit" [disabled]="registerForm.invalid" (click)="onSubmit()"> S'inscrire</button>
     </form>
     <nav>
       <a routerLink="/auth/login">Se connecter</a>
